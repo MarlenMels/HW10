@@ -9,8 +9,7 @@ public class Main {
             String name = inputBookName();
             int pageCount = inputPageCount();
             int cost = inputCost();
-            addBook(name);
-            addBook(name, pageCount);
+
             //todo использовать новый метод тут
             addBook(name, pageCount, cost);
             printInfo();
@@ -31,13 +30,8 @@ public class Main {
         System.out.println("Введите цену:");
         return new Scanner(System.in).nextInt();
     }
-    public static void addBook(String bookName) {
-        addBook(bookName, 0);
-    }
 
-    public static void addBook(String bookName, int pageCount) {
-        booksInfo = booksInfo + bookName + " - " + (pageCount > 0 ? pageCount : "N/A") + " стр.\n";
-    }
+
 
     public static void addBook(String bookName, int pageCount, int cost) {
         booksInfo = booksInfo + bookName + " - " + (pageCount > 0 ? pageCount : "N/A") + " стр. Цена: " + (cost > 0 ? cost : "Не установлено") + "\n";
